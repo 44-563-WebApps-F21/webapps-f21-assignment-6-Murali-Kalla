@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+ <head>
+
+     <title>Personal Details</title>
+
+ </head>
+
+<body>
+
+<h2>Pass phrase by "Muralidhar Reddy Kalla"</h2>
+
+<form>
+
+    <label for="secretphrase">Enter the secret phrase </label>
+    <input type ="password" id="secretphrase" value ="Let me in"> <br><br>
+    <label for="phrase">Enter a phrase </label>
+    <input type ="text" id="phrase"  autofocus> <br><br>
+    <input type="button" class ="btn btn primary" onclick="processPhrase()" value="Check the phrase"/>
+
+</form>
+
+<div id="result"></div>
+
+<script> 
+
+var correct=0,wrong=0;
+
+function processPhrase (){
+
+    spValue = document.getElementById("secretphrase").value
+
+    phraseValue = document.getElementById("phrase").value
+
+    resultDiv = document.getElementById("result")
+
+    if(spValue==phraseValue){
+        alert("Access allowed");
+        correct=correct+1;
+    }else{
+        alert("Access denied");
+        wrong=wrong+1;
+
+    }
+
+    resultDiv.innerHTML="Correct count: "+correct+'<br>'+" Worng count: "+wrong; 
+
+}
+
+</script>
+
+</body>
+
+</html>
