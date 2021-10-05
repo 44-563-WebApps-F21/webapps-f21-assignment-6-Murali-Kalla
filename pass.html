@@ -5,7 +5,7 @@
  <head>
 
      <title>Personal Details</title>
-
+  
  </head>
 
 <body>
@@ -23,6 +23,10 @@
 </form>
 
 <div id="result"></div>
+<br><br>
+<div class="container">
+    <img src= "images/leopard.jpg" id="leopard" alt="Leopard" height="200" width="200" onclick="newImage()">
+</div>
 
 <script> 
 
@@ -46,8 +50,25 @@ function processPhrase (){
     }
 
     resultDiv.innerHTML="Correct count: "+correct+'<br>'+" Worng count: "+wrong; 
-
 }
+
+    var usingImage=1;
+    function newImage(){
+
+        Image=document.getElementById("leopard")
+        switch(usingImage){
+            case 1 : Image.src = "images/lion.jpg"
+                     usingImage =usingImage +1;
+                     break;
+            case 2 : Image.src = "images/kangaroo.jpg"
+                     usingImage =usingImage +1;
+                     break; 
+            case 3 : Image.src = "images/leopard.jpg"
+                     usingImage =usingImage +1;
+                     break; 
+                           
+        } 
+    }
 
 </script>
 
